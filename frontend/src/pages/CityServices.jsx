@@ -16,7 +16,7 @@ const UserGrievanceForm = () => {
   const fetchGrievances = async () => {
     try {
       const response = await fetch(
-        `http://ec2-54-89-96-159.compute-1.amazonaws.com:9000/grievances/user/${userId}`
+        `http://ec2-3-208-3-176.compute-1.amazonaws.com/grievances/user/${userId}`
       );
       const data = await response.json();
       if (response.ok) {
@@ -47,7 +47,7 @@ const UserGrievanceForm = () => {
 
     try {
       const response = await fetch(
-        "http://ec2-54-89-96-159.compute-1.amazonaws.com:9000/grievances/submit",
+        "http://ec2-3-208-3-176.compute-1.amazonaws.com/grievances/submit",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

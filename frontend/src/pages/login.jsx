@@ -19,7 +19,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://ec2-54-89-96-159.compute-1.amazonaws.com:9000/auth/login",
+        "http://ec2-3-208-3-176.compute-1.amazonaws.com0/auth/login",
         {
           method: "POST",
           headers: {
@@ -71,7 +71,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://ec2-54-89-96-159.compute-1.amazonaws.com:9000/auth/register",
+        "http://ec2-3-208-3-176.compute-1.amazonaws.com/auth/register",
         {
           method: "POST",
           headers: {
