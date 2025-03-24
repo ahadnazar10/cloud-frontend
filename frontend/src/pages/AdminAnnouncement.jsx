@@ -13,7 +13,7 @@ const AdminAnnouncement = () => {
 
   // ✅ Fetch Announcements from Backend
   useEffect(() => {
-    fetch("http://ec2-3-208-3-176.compute-1.amazonaws.com/announcements")
+    fetch("http://ec2-98-83-144-51.compute-1.amazonaws.com:9000/announcements")
       .then((res) => res.json())
       .then((data) => setAnnouncements(data))
       .catch((error) => console.error("Error fetching announcements:", error));
@@ -42,7 +42,7 @@ const AdminAnnouncement = () => {
 
     if (isConfirmed) {
       fetch(
-        "http://ec2-3-208-3-176.compute-1.amazonaws.com/announcements/add",
+        "http://ec2-98-83-144-51.compute-1.amazonaws.com:9000/announcements/add",
         {
           method: "POST",
           headers: {
@@ -74,7 +74,7 @@ const AdminAnnouncement = () => {
 
     if (isConfirmed) {
       fetch(
-        `http://ec2-3-208-3-176.compute-1.amazonaws.com/announcements/delete/${id}`,
+        `http://ec2-98-83-144-51.compute-1.amazonaws.com:9000/announcements/delete/${id}`,
         {
           method: "DELETE",
         }

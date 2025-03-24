@@ -7,7 +7,7 @@ const AdminGrievanceDashboard = () => {
   useEffect(() => {
     const fetchGrievances = async () => {
       const response = await fetch(
-        "http://ec2-3-208-3-176.compute-1.amazonaws.com/grievances"
+        "http://ec2-98-83-144-51.compute-1.amazonaws.com:9000/grievances"
       );
       const data = await response.json();
       setGrievances(data);
@@ -18,7 +18,7 @@ const AdminGrievanceDashboard = () => {
 
   const handleResolve = async (id) => {
     const response = await fetch(
-      `http://ec2-3-208-3-176.compute-1.amazonaws.com/grievances/resolve/${id}`,
+      `http://ec2-98-83-144-51.compute-1.amazonaws.com:9000/grievances/resolve/${id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
